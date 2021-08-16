@@ -1,7 +1,7 @@
 //1. function invocation
 //2. method invocation
 //3. Constructor invocation
-//4. Indirect invocation
+//4. Indirect invocation (Call, apply)
 //5. Bound invocation
 //6. Arrow function invocation
 
