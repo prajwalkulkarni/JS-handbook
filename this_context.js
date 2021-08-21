@@ -84,3 +84,18 @@ x() //true
 
 x = fn.bind(x)
 x() // changing "this"'s reference from window to the object 'x'.
+
+//6. Arrow function
+/* Arrow function inherits "this" context from the defined parent function, if no parent function present, "this" refers to execution environment.*/
+
+function someFunction(){
+  cinsole.log(this==window)
+  fn = ()=>{
+    console.log(this==window)
+  }
+  return fn()
+}
+
+obj = someFunction() //true, true
+obj = new someFunction() //false, false
+    
