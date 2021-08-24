@@ -97,5 +97,5 @@ function someFunction(){
 }
 
 obj = someFunction() //true, true
-obj = new someFunction() //false , false
+obj = new someFunction() //false, false
     
