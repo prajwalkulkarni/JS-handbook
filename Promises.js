@@ -3,4 +3,23 @@ it is important to handle errors or failures if occured, this could to accomplis
 
 //Example snippet
 
-function foo(){
+function foo(num){
+  return new Promise(function(resolve,reject){
+    if(num%2==0){
+      resolve("Even number")
+    }
+    else{
+      reject("Odd number")
+    }
+  })
+}
+
+foo(3).then(res=>{
+  console.log(res)
+}).catch(err=>{
+  console.log(err)
+})
+
+//Outputs err callback result :- "Odd number"
+
+  
