@@ -46,6 +46,15 @@ function B(){
 obj1 = new B() //false
 obj1 = B() //true
 
+//To check if they belong to any object, check if the object is an instance of the function/class.
+//can't directly determine if this==object(not possible).
+
+function foo(){
+  console.log(this instanceof foo)
+}
+let obj = new foo() //true
+let obj = foo() //false
+
 
 
 //4. Indirect invocation
