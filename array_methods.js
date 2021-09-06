@@ -113,6 +113,7 @@ numbers.every(isEven); // => false
 
 //Similarly array.some() returns true if atleast one element satisfies the requirement.
 
+//15. array.filter(), array.push(), array.pop()
 
 
 
