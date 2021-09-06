@@ -117,4 +117,20 @@ numbers.every(isEven); // => false
 
 
 
+//16. array.unshift() -->add element to beginning to the array.
+const numbers = [0, 1, 4, 6];
+numbers.unshift(80)
+
+//17. array.shift() --> remove first titem from array and return that item
+
+const numbers = [5,6,7,8,9,0]
+
+numbers.shift() // 5
+
+//18. array.splice()
+//array.splice() -> array.splice(fromIndex,removeCount,item1,item2) ---> item1,item2 represents items to be added in the plce where the previous elements were removed. Optional arg
+
+const marvel = ['iron man','spiderman','hulk','thor','dr strange']
+marvel.splice(1,3,'ant man','black panther','Thanos']) // ['iron man','ant man','black panther','thanos','hulk','thor','dr strange']
+
 
