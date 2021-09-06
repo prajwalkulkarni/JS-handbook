@@ -76,3 +76,44 @@ a.includes(69) //false
 a.includes(2)//true
 
 //10. array.sort() --> sort array, empty values goes to the end
+
+//11. array.includes()
+
+const a = [1,2,3]
+a.includes(2) //true
+a.includes(69) //false
+
+
+//12. array.find() --> returns the first element of the array that satisfies the callback requirement.
+
+const a = [1,2,3,4,5,6,7,8,9,10]
+
+function factorFour(num){
+  return num%4===0
+}
+
+a.find(factorFour) //4
+
+//13. array.indexof()
+const a = [1,2,3,4,5,6,7,8,9,10]
+
+a.indexof(5) //4
+a.indexof(69) //-1
+
+//14. array.every()
+const evens = [0, 2, 4, 6];
+const numbers = [0, 1, 4, 6];
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+evens.every(isEven); // => true
+numbers.every(isEven); // => false
+
+//Similarly array.some() returns true if atleast one element satisfies the requirement.
+
+
+
+
+
