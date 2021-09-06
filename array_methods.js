@@ -133,4 +133,19 @@ numbers.shift() // 5
 const marvel = ['iron man','spiderman','hulk','thor','dr strange']
 marvel.splice(1,3,'ant man','black panther','Thanos']) // ['iron man','ant man','black panther','thanos','hulk','thor','dr strange']
 
+//splice is in-place operator, no new array is returned.
+
+
+
+//METHODS THAT RETURN NEW ARRAY
+/*
+map
+filter
+Array.from
+concat
+slice
+*/
+
+
+
 
