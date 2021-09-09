@@ -23,4 +23,5 @@ foo(3).then(res=>{
 //Outputs err callback result :- "Odd number"
 
 //In promise chaining subsequent then blocks are executed only if the previous then block returns a resolved promise object.
+//If in any then blocks, if anything(including but not limited to, calling rejection function , throwing error) or anything that'd bring a erranous state is handled by the catch block.
   
