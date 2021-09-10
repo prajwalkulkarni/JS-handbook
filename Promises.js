@@ -26,3 +26,6 @@ foo(3).then(res=>{
 //If in any then blocks, if anything(including but not limited to, calling rejection function , 
 //throwing error) or anything that'd cause an erranous state is handled by the catch block.
   
+
+//If async/await is used, since there's no chained catch block, one should wrap the async/await calls within a trivial try/catch block
+//so that the error states are mananged in the catch block.
