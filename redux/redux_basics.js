@@ -69,3 +69,10 @@ export default function Component(){
 )
 }
 
+/*
+Since the above pattern follows context API, redux toolkit could be used to leverage the use of redux.
+Redux toolkit is a library provided by redux team to enhance the use of redux. 
+*/
+
+//Redux toolkit installation
+// npm install @reduxjs/toolkit
