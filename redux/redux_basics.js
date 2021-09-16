@@ -67,6 +67,5 @@ export default function Component(){
     <button onClick={decrementHandler}>Decrement</button>
     </>
 )
-
 }
 
