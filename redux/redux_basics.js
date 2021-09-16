@@ -38,4 +38,35 @@ console.log(value) //Logs the state object of the store
 store.subscribe(subscriber)
 store.dispatch() //need to pass object containing action 
 */
+
+
 //COMPONENT
+/* To access, mutate and display the store values, we need to dipatch and select attributes from the store
+This is accomplished using useDispatch and useSelector hook */
+import {useDispatch,useSelector} from 'redux'
+export default function Component(){
+  const dispatch = useDispatch()
+  const {val:value} = useSelector(state=>state)
+  
+  //use the aliased value constant to display value, and dispatch to dispatch appropriate actions
+  
+  const incrementHandler = () =>{
+    dispatch({type:"increment"})
+    
+  }
+  
+  const decrementHandler = () =>{
+    dispatch({type:"decrement"})
+    
+  }
+  
+  return(
+    <>
+    <h1>{value}</h1>
+    <button onClick={incrementHandler}>Increment</button>
+    <button onClick={decrementHandler}>Decrement</button>
+    </>
+)
+
+}
+
