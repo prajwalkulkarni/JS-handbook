@@ -76,3 +76,24 @@ Redux toolkit is a library provided by redux team to enhance the use of redux.
 
 //Redux toolkit installation
 // npm install @reduxjs/toolkit
+
+//redux toolkit mainly provides, configureStore and createSlice functions, that can be used to build redux stores more professionally and with ease.
+
+import {createSlice, cocfigureStore} from '@reduxjs/toolkit'
+
+const slice = createSlice({
+  name:'name_of_the_slice_identifier',
+  initialState:{}//initial state of the store,
+  reducers:{
+    fn:()=>{} //Functions that perform various action on the state, the functions as regular reducers accept state and action
+    //action could be used if any arguments are sent over the dispatch function, the argument could be utilised within the reducer function using '.payload' object
+  }
+})
+
+const store = configureStore({
+  reducer:slice.reducer //multiple reducers could be used, by nesting within an object
+})
+
+export const sliceActions = slice.actions
+export default store
+
