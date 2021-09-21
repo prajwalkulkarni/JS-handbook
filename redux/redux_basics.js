@@ -99,3 +99,15 @@ export default store
 
 
 //Action creators
+/* Action creators can be used to club multiple actions and remove code duplication and redundancy in useEffect(e.g only) or avoid multiple dipatch functions.
+Action create is basically a function that accepts an argument and returns a function, the returned function is a dispatch function which is automatically called by redux for us.*/
+
+export const actionCreator = (arg) =>{
+  return dispatch=>{
+    actions.actionfunction(arg)
+  }
+}
+
+/*Action caller component*/
+
+dispatch(actionCenter(passingArg)
