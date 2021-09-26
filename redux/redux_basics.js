@@ -94,10 +94,17 @@ const store = configureStore({
   reducer:slice.reducer //multiple reducers could be used, by nesting within an object
 })
 
+//Multiple reducer nesting in configureStore
+const store = configureStore({
+  reducer:{
+    sliceA:slice.reducer,
+    sliceB:slice2.reducer
+  }
+})
 
 export const sliceActions = slice.actions
 export default store
-
+//If the reducers are nested in configureStore, state objects can be accessed by drilling thorugh reducer keys of configure store
 
 //Action creators
 /* Action creators can be used to club multiple actions and remove code duplication and redundancy in useEffect(e.g only) or avoid multiple dipatch functions.
