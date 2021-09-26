@@ -15,7 +15,7 @@ The basic structure of redux resembles to that of context API, i.e needs a reduc
 //REDUX STORE
 import {createStore} from 'redux'
 const initState = {val:0}
-const reducer = (state=val,action)=>{
+const reducer = (state=initState,action)=>{
   switch(action.type){
     case 'increment':
       return {val:state.val+1}
@@ -93,6 +93,7 @@ const slice = createSlice({
 const store = configureStore({
   reducer:slice.reducer //multiple reducers could be used, by nesting within an object
 })
+
 
 export const sliceActions = slice.actions
 export default store
