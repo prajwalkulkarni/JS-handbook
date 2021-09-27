@@ -75,7 +75,7 @@ const a = [1,2,3]
 a.includes(69) //false
 a.includes(2)//true
 
-//10. array.sort() --> sort array, empty values goes to the end
+//10. array.sort() --> sort array, empty values goes to the end.
 
 //11. array.includes()
 
