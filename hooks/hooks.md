@@ -19,3 +19,20 @@
   <li>useHistory()</li>
   <li>useLocation()</li>
  </ul>
+
+<hr/>
+
+<h1>Redux Hooks</h1>
+
+<ul>
+  <li>useDispatch()</li>
+  <li>useSelector((obj)=>obj.key)</li>
+</ul>
+
+
+<h3> Important redux methods using redux-toolkit</h3>
+
+<ul>
+  <li>createSlice({...})</li>
+  <li>configureStore({...})</li>
+</ul>
