@@ -5,4 +5,5 @@
   <li>useReducer(dispatchFn,initState)</li>
   <li>useEffect(callback,[dependencies])</li>
   <li>useCallback(callback,[dependencies]</li>
+  <li>useContext(contextProvider)</li>
  </ul>
