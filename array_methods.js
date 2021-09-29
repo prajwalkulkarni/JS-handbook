@@ -141,6 +141,8 @@ let arr = [1,2,3,4,5,6,7]
 arr.fill(3,2)
 //arr: 1,2,3,3,3,3,3
 
+//if no 2nd arg is passed, 0 is the default startIndex.
+
 //METHODS THAT RETURN NEW ARRAY
 /*
 map
