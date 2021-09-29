@@ -135,7 +135,11 @@ marvel.splice(1,3,'ant man','black panther','Thanos']) // ['iron man','ant man',
 
 //splice is in-place operator, no new array is returned.
 
-
+//19. array.fill()
+//fill() method of array object accepts 2 args, 1st one -> content to be filled, 2nd arg-> fron what index.
+let arr = [1,2,3,4,5,6,7]
+arr.fill(3,2)
+//arr: 1,2,3,3,3,3,3
 
 //METHODS THAT RETURN NEW ARRAY
 /*
