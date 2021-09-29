@@ -35,8 +35,8 @@ Array.from(a,arg=>arg*2)
 const a = [1,2,3]
 
 let initValue = 5
-const callback = (preceedValue,currentValue) =>{
-  return preceedValue+currentValue
+const callback = (accumulator,currentValue) =>{
+  return accumulator+currentValue
 }
 a.reduce(callback,initValue)
 //5+1+2+3 = 11
