@@ -30,4 +30,4 @@ foo(3).then(res=>{
 //If async/await is used, since there's no chained catch block, one should wrap the async/await calls within a trivial try/catch block
 //so that the error states are mananged in the catch block.
 
-//IMPORTANT: if an error is thrown, it is handled by catch block, if an error is RETURNED the subsequent then block is executed
+//IMPORTANT: if an error is THROWN, it is handled by catch block, if an error is RETURNED the subsequent then block is executed
