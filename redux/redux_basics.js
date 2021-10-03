@@ -111,6 +111,47 @@ export default function Compoenet(){
   ...
 }
 
+  
+//Redux in class based components
+//Since hooks cannot be used to class based components, connect function can be used to make use of redux store in class based component.
+
+  
+  import {connect} from 'react-redux/toolkit' //? not sure of the library
+  
+  class ClassComponent extends React.Component{
+    constructor(props){
+      ...
+    }
+      render(){
+        return(
+          <p>{this.props.attrTobeUsedInClass}</p>
+          )
+      }
+  }
+ 
+  //connect funciton accepts two arguments, both of which are functions, 1st one->mapStateToProps
+  //mapStateToProps accepts a single argument which is the state of the redux store, this function should return an object with key values, where each value corresponds to a 
+  //redux state attribute which is assigned to the key which is used inside the classs component.
+  const mapStateToProps = (state)=>{
+    return {
+      attrTobeUsedInClass:state.a,
+      attrTobeUsedInClassTwo:state.b,
+   }
+  }
+  
+  
+  //mapDispatchToProps accets an argument which is the dispatch function in the redux store, this function should return an object with key values, where each value corresponds to a
+  //redux reducer function (dispatch function) which is assigned to the key which is used inside the class component.
+  const mapDispatchToProps = (dispatch)=>{
+    
+    return {
+      dispatchFunctionTobeUsedInClass: dispatch({"type":"SOMETHING}),
+      dispatchFunctionTobeUsedInClass: dispatch(actions.someReducerFnFromReduxStore(arg))
+    }
+  }
+                                                 
+  export default connect(mapStateToProps,mapDispatchToProps)(ClassComponent)    
+  
 //Action creators
 /* Action creators can be used to club multiple actions and remove code duplication and redundancy in useEffect(e.g only) or avoid multiple dipatch functions.
 Action create is basically a function that accepts an argument and returns a function, the returned function is a dispatch function which is automatically called by redux for us.*/
