@@ -145,8 +145,8 @@ export default function Compoenet(){
   const mapDispatchToProps = (dispatch)=>{
     
     return {
-      dispatchFunctionTobeUsedInClass: dispatch({"type":"SOMETHING}),
-      dispatchFunctionTobeUsedInClass: dispatch(actions.someReducerFnFromReduxStore(arg))
+      dispatchFunctionTobeUsedInClass: ()=>{dispatch({"type":"SOMETHING})},
+      dispatchFunctionTobeUsedInClass: ()=>{dispatch(actions.someReducerFnFromReduxStore(arg))}
     }
   }
                                                  
