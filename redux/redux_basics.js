@@ -140,7 +140,7 @@ export default function Compoenet(){
   }
   
   
-  //mapDispatchToProps accets an argument which is the dispatch function in the redux store, this function should return an object with key values, where each value corresponds to a
+  //mapDispatchToProps accepts an argument which is the dispatch function in the redux store, this function should return an object with key values, where each value corresponds to a
   //redux reducer function (dispatch function) which is assigned to the key which is used inside the class component.
   const mapDispatchToProps = (dispatch)=>{
     
