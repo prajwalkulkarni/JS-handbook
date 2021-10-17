@@ -3,6 +3,7 @@ import { screen,render } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import Greeting from "./Greeting"
 
+//Test suite
 describe('Greeting component',()=>{
     test('Greeting component hello world text',()=>{
         //Arrange
