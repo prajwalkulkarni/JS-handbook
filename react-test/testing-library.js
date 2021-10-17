@@ -5,6 +5,8 @@ import Greeting from "./Greeting"
 
 //Test suite
 describe('Greeting component',()=>{
+    
+    //Individual tests
     test('Greeting component hello world text',()=>{
         //Arrange
         render(<Greeting/>)
