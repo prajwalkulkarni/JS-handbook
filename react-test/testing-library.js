@@ -20,9 +20,10 @@ describe('Greeting component',()=>{
     })
 
     test('Check if button clicked or not',()=>{
-
+        //Arrange
         render(<Greeting/>)
-
+        
+        //Assert
         let linkElement = screen.getByText(/P tag/i)
         expect(linkElement).toBeInTheDocument()
     })
