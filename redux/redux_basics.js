@@ -162,6 +162,6 @@ export const actionCreator = (arg) =>{
   }
 }
 
-/*Action caller component*/
+/*Action caller component.*/
 
-dispatch(actionCenter(passingArg)
+dispatch(actionCenter(passingArg))
