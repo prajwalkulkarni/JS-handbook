@@ -69,3 +69,21 @@ export async function getStaticProps(context){
     }
   }
 }
+
+
+//getServerSideProps
+/* Server side props function runs for every request made on the server and then pre-render the content into HTML and serves the HTML file to client. This can be used when 
+data is unique to each user or requires auth*/
+
+export async function getServerSideProps(context){
+  //get access to request type and also be able to send response result
+  const req = context.req
+  const res = context.res
+  
+  return {
+    props:{
+      data:res.answer
+    }
+  }
+}
+}
