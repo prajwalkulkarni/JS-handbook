@@ -154,11 +154,16 @@ export default function Compoenet(){
   
 //Action creators
 /* Action creators can be used to club multiple actions and remove code duplication and redundancy in useEffect(e.g only) or avoid multiple dipatch functions.
-Action create is basically a function that accepts an argument and returns a function, the returned function is a dispatch function which is automatically called by redux for us.*/
+Action create is basically a function that accepts an argument and returns a function, the returned function is a dispatch function which is automatically called by redux for us.
+Action creators are used basically to club async and regular code, since reducers cannot/should not handle async code.
+Async code can reside in useEffect of the component or action creator, of which latter is preferred.
+*/
 
 export const actionCreator = (arg) =>{
   return dispatch=>{
-    actions.actionfunction(arg)
+    //async work done here
+    dispatch(actions.actionfunction(arg))
+    //Can use multiple dispatch functions.
   }
 }
 
