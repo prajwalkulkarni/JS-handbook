@@ -169,4 +169,4 @@ export const actionCreator = (arg) =>{
 
 /*Action caller component.*/
 
-dispatch(actionCenter(passingArg))
+dispatch(actionCreator(passingArg))
