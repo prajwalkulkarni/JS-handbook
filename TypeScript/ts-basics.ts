@@ -69,3 +69,17 @@ let person: Person
 
 let people: Person[]
 
+
+//Generics
+//Generics in TypeScript is similar to Generics in Java and vectors in C++. The main purpose of TypeScript is to have flxibility along with type safety. As the name suggests
+//generics are used to build something generic(general) that can be adapted to various types depending on the input
+
+function add<T>(val1:T,val2:T){
+  return val1+val2
+}
+
+const res = add('a','b') //add('a','b') : string , although it was not specified that string should be returned from the function, TS logicalizes it and infers from the passed args.
+console.log(res) //ab
+
+const res = add(6,69)
+console.log(res) //75
