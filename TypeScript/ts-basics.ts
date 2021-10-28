@@ -33,7 +33,10 @@ person = {
 } 
 //^Not valid because age is of type string and an extra property of height is assigned.
 
-
+let people:{
+  name:string,
+  age:number
+}[] //Array of people
 
 //Type Inference
 let age:number = 21
@@ -48,4 +51,21 @@ let age:number = 21
 let tShirtSize : number | string 
 tShirtSize = 'XL'
 tShirtSize = 40
+
+
+//Type aliases
+
+//In type definition we saw defining type of array of persons to people, in the above case we could see that there was code redundancy and code-repititon. To avoid that
+// we could use type aliases, meaning we are defining our own type. This can accomplished using the type keyword exclusive to TypeScript.
+
+type Person = {
+  name:string,
+  age: number
+}
+//Here we are not assigning any object to Person, but instead we are defining the structure of Person because we've used the keyword type instead of let,var, const.
+//So person variable can then be initialised like:
+let person: Person
+//And people like
+
+let people: Person[]
 
