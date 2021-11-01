@@ -7,6 +7,7 @@
 
 
 var path = require('path')
+var webpack = require('webpack')
 module.exports = {
   entry: './src/js/app.js', //Relative path
   output: {
@@ -22,5 +23,9 @@ module.exports = {
         'css-loader',  //Apply the loaders, loaders are executed in the reverse order
       ]
     ]
-  }
+  },
+  plugins:[
+    new webpack.optimize.UglifyJsPlugin({})
+  ]
+    
 }
