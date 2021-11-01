@@ -1,1 +1,14 @@
+//webpack is a JS bundler that helps minify and optimize JS build files. It is mainly built for JS, but can also deal with HTML and css assets.
+//The basic idea behind webpack is to provide a starting point for webpack and that file to include other js files which will be clubbed/bundled into an optimized file.
+//We shoudl also provide an output directory where the build files needs to be located.
+{
+  "scripts":{
+    "build":"webpack-dev-server ./src/js/starter.js --output-filename ./distribution/bundle.js"
+    ...
+    ...
+  }
+  ...
+  ...
+}
 
+//The entry and output file dirs are relative to the location of package.json 
