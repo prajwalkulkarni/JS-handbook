@@ -12,3 +12,4 @@
 }
 
 //The entry and output file dirs are relative to the location of package.json 
+//The scripts are then executed using npm run build/npm run build --prod
