@@ -10,7 +10,17 @@ var path = require('path')
 module.exports = {
   entry: './src/js/app.js', //Relative path
   output: {
-    path: path.resolve(__dirname,'dist') //Absolute path, dist is a non existing directory that'll be created when the file is bundled
-    filename:'bundle.js' //Anyname
+    path: path.resolve(__dirname,'dist'), //Absolute path, dist is a non existing directory that'll be created when the file is bundled
+    filename:'bundle.js', //Anyname
+    publicPath:'/dist'
+  },
+  module:{
+    rules:[
+      test: /\.css$/, //For what files we'd want to apply transformations
+      use:[
+        'style-loader',
+        'css-loader',  //Apply the loaders, loaders are executed in the reverse order
+      ]
+    ]
   }
 }
