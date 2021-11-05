@@ -31,3 +31,5 @@ foo(3).then(res=>{
 //so that the error states are mananged in the catch block.
 
 //IMPORTANT: if an error is THROWN, it is handled by catch block, if an error is RETURNED the subsequent then block is executed
+
+//Promise.all executes then block if passed array of promises all resolve
