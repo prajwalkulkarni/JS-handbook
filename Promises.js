@@ -33,3 +33,8 @@ foo(3).then(res=>{
 //IMPORTANT: if an error is THROWN, it is handled by catch block, if an error is RETURNED the subsequent then block is executed
 
 //Promise.all executes then block if passed array of promises all resolve
+
+/*Promise.allSettled is the method which helps to achieve the functionality which completes after all promises settle no matter of failures
+It receives array of promises as an argument to it
+Array of results will be the output after completion of all promises with status as 'fulfilled' or 'rejected'*/
+
