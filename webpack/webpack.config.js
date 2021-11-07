@@ -17,11 +17,13 @@ module.exports = {
   },
   module:{
     rules:[
-      test: /\.css$/, //For what files we'd want to apply transformations
-      use:[
+      {
+        test: /\.css$/, //For what files we'd want to apply transformations
+        use:[
         'style-loader',
         'css-loader',  //Apply the loaders, loaders are executed in the reverse order
-      ]
+        ]
+      }
     ]
   },
   plugins:[
