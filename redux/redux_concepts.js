@@ -116,7 +116,7 @@ export default function Compoenet(){
 //Since hooks cannot be used to class based components, connect function can be used to make use of redux store in class based component.
 
   
-  import {connect} from 'react-redux/toolkit' //? not sure of the library
+  import {connect} from 'react-redux'
   
   class ClassComponent extends React.Component{
     constructor(props){
