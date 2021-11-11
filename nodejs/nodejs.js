@@ -22,3 +22,5 @@ app.use((req,res,next)=>{
 })
 
 app.listen(PORT_NO);
+
+//nodemon is a dev dependency that helps in hot reloading.
