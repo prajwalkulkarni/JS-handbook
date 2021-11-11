@@ -18,7 +18,7 @@ const app = express()
 app.use((req,res,next)=>{
   
   res.send('<h1>Hello, world!</h1>')
-  next() //next() method to forward the request to other middleware
+  next() //next() method to forward the request to the next middleware
 })
 
 app.listen(PORT_NO);
