@@ -106,7 +106,7 @@ export const sliceActions = slice.actions
 export default store
 //If the reducers are nested in configureStore, state objects can be accessed by drilling through reducer keys of configure store
 //e.g in function component
-export default function Compoenet(){
+export default function Component(){
   const {stateAttributeOfSliceA:selector} = useSelector(arg=>arg.sliceA.stateAttributeOfSliceA) //object de-structuring and object aliasing
   ...
 }
