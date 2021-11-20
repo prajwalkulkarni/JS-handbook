@@ -129,7 +129,7 @@ export default function Component(){
       }
   }
  
-  //connect funciton accepts two arguments, both of which are functions, 1st one->mapStateToProps
+  //connect function accepts two arguments, both of which are functions, 1st one->mapStateToProps
   //mapStateToProps accepts a single argument which is the state of the redux store, this function should return an object with key values, where each value corresponds to a 
   //redux state attribute which is assigned to the key which is used inside the classs component.
   const mapStateToProps = (state)=>{
