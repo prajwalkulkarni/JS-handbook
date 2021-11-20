@@ -150,7 +150,7 @@ export default function Component(){
     }
   }
                                                  
-  export default connect(mapStateToProps,mapDispatchToProps)(ClassComponent)    
+ export default connect(mapStateToProps,mapDispatchToProps)(ClassComponent)    
   
 //Action creators
 /* Action creators can be used to club multiple actions and remove code duplication and redundancy in useEffect(e.g only) or avoid multiple dipatch functions.
@@ -168,5 +168,6 @@ export const actionCreator = (arg) =>{
 }
 
 /*Action caller component.*/
+
 
 dispatch(actionCreator(passingArg))
