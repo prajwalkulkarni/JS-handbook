@@ -53,7 +53,10 @@ const schema = new mongoose.Schema({
   age:{type:Number, requried:true}
 })
 
-const model = mongoose.model('NAME_OF_THE_MODEL',schema)
+const model = mongoose.model('NAME_OF_THE_COLLECTION',schema) //The specified named will further be converted to smallcase and will be pluralized.
+//E.g
+const productModel = mongoose.model('Product',schema)
+//Collection name: products
 
 module.exports = model
 
@@ -65,5 +68,10 @@ const Product = require('./models/model');
 
 mongoose.connect('URL_OF_THE_SERVER_DB')
 //^ uses connection pooling to open and close connections as and when required.
+
+//instantiate and pass data to the model
+const instantiation = new Product({name:'Prajwal',age:20})
+instantiation.save() //Save method is used to add new document to the collection.
+//save is an asynchronous method.
                         
                         
