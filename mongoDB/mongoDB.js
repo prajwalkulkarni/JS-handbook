@@ -44,6 +44,8 @@ client.close() //Close connection after doing the operations.
 //This can get cumbersome at times. Hence, we could make use of Mongoose, it's like a helper class for MongoDb,
 //it also makes it easier to define models and schemas to it
 
+
+//MONGOOSE
 //Defining a model
 
 const mongoose = require('mongoose')
@@ -73,5 +75,7 @@ mongoose.connect('URL_OF_THE_SERVER_DB')
 const instantiation = new Product({name:'Prajwal',age:20})
 instantiation.save() //Save method is used to add new document to the collection.
 //save is an asynchronous method.
-                        
-                        
+
+//Getting documents from collections.
+const getResults = await Product.find().exec() //find is a static method on model.
+
