@@ -19,6 +19,22 @@ const db = client.db()
 
 const collection = db.collection('COLLECTION_NAME')
 
-collection.insertOne({record})
+collection.insertOne({record}) //Add document
+
+
 
 client.close() //Close connection after doing the operations.
+
+
+const client = new MongoClient(url)
+await client.connect()
+const db = client.db()
+
+const collection = await db.collection('COLLECTION_NAME') //Need to await when querying results
+
+collection.find().toArray() //find returns a cursor to the query which can then be iterated over to fetch the desired result.
+//If the whole collection needs to be returned, this 2 step process could be avoided by converting it to an array.
+
+
+client.close() //Close connection after doing the operations.
+
