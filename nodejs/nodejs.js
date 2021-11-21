@@ -1,6 +1,6 @@
 //NodeJS
 
-const http = express('http')
+const http = require('http')
 
 http.createServer((req,res)=>{
   res.end('<h1>Hello world!')
