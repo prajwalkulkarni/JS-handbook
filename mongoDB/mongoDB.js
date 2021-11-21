@@ -44,3 +44,15 @@ client.close() //Close connection after doing the operations.
 //This can get cumbersome at times. Hence, we could make use of Mongoose, it's like a helper class for MongoDb,
 //it also makes it easier to define models and schemas to it
 
+//Defining a model
+
+const mongoose = require('mongoose')
+
+const schema = new mongoose.Schema({
+  name:{type:String, required:true},
+  age:{type:Number, requried:true}
+})
+
+const model = mongoose.model('NAME_OF_THE_MODEL',schema)
+
+module.exports = model
