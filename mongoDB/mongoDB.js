@@ -38,3 +38,9 @@ collection.find().toArray() //find returns a cursor to the query which can then 
 
 client.close() //Close connection after doing the operations.
 
+
+//We can notice above that, each time we want to perform an operation, we are opening the connection
+//connecting to server accessing the database, performing the operation and then closing the connection.
+//This can get cumbersome at times. Hence, we could make use of Mongoose, it's like a helper class for MongoDb,
+//it also makes it easier to define models and schemas to it
+
