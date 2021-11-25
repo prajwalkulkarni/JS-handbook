@@ -12,6 +12,7 @@ module.exports = {
   entry: './src/js/app.js', //Relative path
   output: {
     path: path.resolve(__dirname,'dist'), //Absolute path, dist is a non existing directory that'll be created when the file is bundled
+    //path:path.join(__dirname,'dist') ---> No need of using publicPath
     filename:'bundle.js', //Anyname
     publicPath:'/dist'
   },
