@@ -27,7 +27,7 @@ module.exports = {
       }
     ]
   },
-  plugins:[
+  plugins:[ //Plugins not mandatory
     new webpack.optimize.UglifyJsPlugin({})
   ]
     
