@@ -11,6 +11,7 @@
 
 <hr/>
 
+
 <h1>React Router Hooks</h1>
 
 <ul>
@@ -35,4 +36,5 @@
 <ul>
   <li>createSlice({...})</li>
   <li>configureStore({...})</li>
+  <li>const actions = sliceInstance.actions</li>
 </ul>
