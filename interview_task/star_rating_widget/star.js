@@ -1,4 +1,3 @@
-
 import "./styles.css";
 
 
@@ -15,26 +14,24 @@ const stars = document.getElementsByClassName('star')
 for(const star of stars){
 
   star.addEventListener('mouseover',function(){
-    // star.classList.contains("starSelected")?star.classList.remove("starSelected"):null
-    var allElements = document.querySelectorAll(".starSelected");
-   for(let i=0; i<allElements.length; i++)
-   { 
-    allElements[i].classList.remove('starSelected');
-   }
-
+    document.querySelector("#rating").innerHTML = "Rating:"
    var elements = document.querySelectorAll(".clicked");
-   for(let i=0; i<allElements.length; i++)
+  //  console.log(elements)
+   for(let i=0; i<elements.length; i++)
    { 
     elements[i].classList.remove('clicked');
+    elements[i].classList.remove('starSelected');
    }
-    for(let i=0;i<=parseInt(star.id);++i){
+    for(let i=0;i<=star.id;++i){
+      
+
       document.getElementById(i).classList.add("starSelected")
     }
   })
 
   star.addEventListener('mouseout',function(){
     // star.classList.contains("starSelected")?star.classList.remove("starSelected"):null
-    for(let i=parseInt(star.id);i>=0;--i){
+    for(let i=star.id;i>=0;--i){
         if(!document.getElementById(i).classList.contains('clicked')){
           document.getElementById(i).classList.remove("starSelected")
         }
@@ -43,15 +40,16 @@ for(const star of stars){
 
   star.addEventListener('click',function(){
     // star.classList.contains("starSelected")?star.classList.remove("starSelected"):null
-    for(let i=0;i<=parseInt(star.id);++i){
+    for(let i=0;i<=star.id;++i){
 
       document.getElementById(i).classList.add("clicked")
       document.getElementById(i).classList.add("starSelected")
     }
+
+    document.querySelector("#rating").innerHTML = `Rating: ${+star.id+1}`
   })
   
 }
-
 
 
 function createStar(index){
