@@ -68,6 +68,7 @@ module.exports = model
 const mongoose = require('mongoose')
 const Product = require('./models/model');
 
+
 mongoose.connect('URL_OF_THE_SERVER_DB')
 //^ uses connection pooling to open and close connections as and when required.
 
