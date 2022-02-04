@@ -146,7 +146,7 @@ export default function Component(){
     
     return {
       dispatchFunctionTobeUsedInClass: ()=>{dispatch({"type":"SOMETHING})},
-      dispatchFunctionTobeUsedInClass: ()=>{dispatch(actions.someReducerFnFromReduxStore(arg))}
+      dispatchFunctionTobeUsedInClass: (arg)=>{dispatch(actions.someReducerFnFromReduxStore(arg))}
     }
   }
                                                  
