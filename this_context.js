@@ -9,7 +9,7 @@
 //1. Function Invocation, in DOM control flow, "this" in a function invocation refers to execution environment ( window in a browser)
 
 function fn(){
-  console.log(this==window) //true
+  console.log(this===window) //true
 }
 
 //Context of "this" can be altered based on the object that's calling the function, method invocation(Read below).
@@ -19,7 +19,7 @@ function fn(){
 
 obj = {
   property: function(){
-    console.log(this==obj) //true
+    console.log(this===obj) //true
   }
 }
 
@@ -32,15 +32,20 @@ obj.property() // method invocation
 
 class B{
   constructor(){
-    console.log(this == window)
+    console.log(this === window)
   }
 }
 
+//Constructor function
+
+function B(attribute){
+  this.attribute = attribute
+}
 obj1 = new B() //false
-obj2 = B()     //Uncaught error, cannot be invoked without new keyword.
+obj2 = B(5)     //if try to acces method object -> Uncaught error, cannot access type of undefined.
 
 function B(){
-  console.log(this==window)
+  console.log(this===window)
 }
 
 obj1 = new B() //false
@@ -66,7 +71,7 @@ obj = {
   prop:10,
   
   fn:function(){
-    console.log(this==obj) //true
+    console.log(this===obj) //true
     
     function innerfunction(){
       console.log(this==window)//true, if no modifiers are applied, i.e no indirect invocation is made.
@@ -99,7 +104,7 @@ x() // changing "this"'s reference from window to the object 'x'.
 
 function someFunction(){
   cinsole.log(this===window)
-  fn = ()=>{
+  const fn = ()=>{
     console.log(this===window)
   }
   return fn()
