@@ -13,7 +13,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname,'dist'), //Absolute path, dist is a non existing directory that'll be created when the file is bundled
     //path:path.join(__dirname,'dist') ---> No need of using publicPath
-    filename:'bundle.js', //Anyname
+    filename:'bundle.js', //Anyname, suggested to use filename.[contentHash].js for cache busting, the content hash changes whenever the file changes.
+    //if not, a cached version will be served.
     publicPath:'/dist'
   },
   module:{
