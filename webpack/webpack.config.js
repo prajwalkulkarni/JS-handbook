@@ -29,7 +29,11 @@ module.exports = {
     ]
   },
   plugins:[ //Plugins not mandatory
-    new webpack.optimize.UglifyJsPlugin({})
+    new webpack.optimize.UglifyJsPlugin({}),
+    new HtmlWebpackPlugin({   //This is to be used if the file name is set dynamically, because the script source file name keeps changing whenever file contents are changed,
+      //thus when a template is passed, it is considered as the base file with 
+      template:'path/to/html'
+    })
   ]
     
 }
