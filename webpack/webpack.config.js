@@ -1,4 +1,4 @@
-// webpack.config.js is the standard file to write the rules of bundling, the name of the config.js file should be as is(webpack.config.js).
+// webpack.config.js is the standard file to write the rules of bundling.
 //There are 4 main parts of webpack config
 //1.Entry point -> The file from which the bundling should begin.
 //2. Destination file/folder -> Bundled file's destination dir
