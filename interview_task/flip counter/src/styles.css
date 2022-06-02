@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+span {
+  height: 80px;
+  width: 80px;
+  background: linear-gradient(rgb(143, 252, 243), rgb(48, 248, 255));
+  text-align: center;
+  margin: 5px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  position: relative;
+}
+
+.flip.units:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: rgb(143, 252, 243);
+  transform-origin: bottom;
+  /* z-index: -1; */
+  perspective: 7.6em;
+  animation: animateup 250ms forwards normal 1;
+}
+
+.flip.units:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: rgb(78, 241, 247);
+  transform-origin: top;
+  /* z-index: -1; */
+  transform: rotateX(-90deg);
+  perspective: 7.6em;
+  animation: animatedown 250ms forwards normal 250ms 1;
+}
+
+.flip.tens:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: rgb(143, 252, 243);
+  transform-origin: bottom;
+  /* z-index: -1; */
+  perspective: 7.6em;
+  animation: animateup 250ms forwards normal 1;
+}
+
+.flip.tens:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: rgb(78, 241, 247);
+  transform-origin: top;
+  /* z-index: -1; */
+  transform: rotateX(-90deg);
+  perspective: 7.6em;
+  animation: animatedown 250ms forwards normal 250ms 1;
+}
+
+@keyframes animateup {
+  from {
+    transform: rotateX(0deg) translateY(2px);
+  }
+  to {
+    transform: rotateX(-90deg) translateY(0px) translateZ(10px);
+  }
+}
+
+@keyframes animatedown {
+  from {
+    transform: rotateX(-90deg);
+  }
+  to {
+    transform: rotateX(0deg) translateY(0px) translateZ(10px);
+  }
+}
