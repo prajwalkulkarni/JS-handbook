@@ -86,7 +86,7 @@ x = obj.fn.apply(x)
 x()
 
 
-//5. Bind functioon invocation
+//5. Bind function invocation
 /*Bound functions context is strict and cannot be manipulated even with the use of indirect invocation.
 i.e, using call or apply.*/
 function fn(){
