@@ -8,6 +8,8 @@
 
 var path = require('path')
 var webpack = require('webpack')
+
+const CleanWebpackPlugin = reuqire('clean-webpack-plugin')
 module.exports = {
   entry: './src/js/app.js', //Relative path
   
@@ -23,6 +25,7 @@ module.exports = {
     ]
   },
   plugins:[ //Plugins not mandatory
+    new CleanWebpackPlugin(), // Removes previous content hashed files and replaces it with new one.
     new webpack.optimize.UglifyJsPlugin({}),
     new HtmlWebpackPlugin({   //This is to be used if the file name is set dynamically, because the script source file name keeps changing whenever file contents are changed,
       //thus when a template is passed, it is considered as the base file with.
