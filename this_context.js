@@ -113,3 +113,22 @@ function someFunction(){
 obj = someFunction() //true, true
 obj = new someFunction() //false, false
     
+
+
+
+
+
+
+
+var val = 5
+function bar(){
+     console.log(this.val)
+}
+const object ={
+      val:50,
+      method: function(foo){
+            foo();
+            arguments[0]();
+      }
+}
+object.method(bar,500)
