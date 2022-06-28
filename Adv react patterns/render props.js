@@ -1,4 +1,5 @@
-
+//Render props are a react pattern where a component that needs to be rendered is passed as a prop to the container componnet. This again, address code reusability 
+//and avoid code duplication.
 import "./RenderProps.css";
 
 export default function RenderProps(props) {
