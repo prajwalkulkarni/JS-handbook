@@ -16,4 +16,5 @@ function deepCheck(val1,val2){
    return JSON.stringify(val1) === JSON.stringify(val2) 
 }
 
+console.log('123',123)
 console.log(deepCheck({},[]))
