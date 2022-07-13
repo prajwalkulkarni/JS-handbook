@@ -22,13 +22,13 @@ module.exports = merge(webpackconfig,{
     },{
       test:/\.scss$/,
       use:[
-        'MiniCssExtractpLugin.loader, // Generate separate css file instead of converting css into commonjs module and injecting it to js file(Do it only in production, because it takes time to spit out css file).
+        'MiniCssExtractpLugin.loader', // Generate separate css file instead of converting css into commonjs module and injecting it to js file(Do it only in production, because it takes time to spit out css file).
         'css-loader',
         'sass-loader'
    ],
   plugins:[
     new HtmlWebpackPlugin({
-      template:'paht/to/html'
+      template:'path/to/html'
     }),
     new MiniCssExtractPlugin({
       filename:'[name].[contenthash].css'
