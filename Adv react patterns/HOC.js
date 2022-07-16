@@ -26,4 +26,15 @@ export default withWrapper;
 
 
 const HOCWrappedSecret = withWrapper(Secret);
-//Other use cases include:
+//Other use cases include: Providing specific styling to components:
+
+const Hello = ({name,...others})=>{
+  return <div {...others}>Hello,{name}</div>
+}
+
+const withStyles = (BaseComponent) => (props) =>{
+  return <BaseComponent {...props} style={{color:red,font-weight:bold}}/>
+}
+
+const HOC = withStyles(Hello)
+return <HOC name="Super user"/> //props = name ==> {...props} is name prop
