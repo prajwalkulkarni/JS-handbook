@@ -26,3 +26,4 @@ export default withWrapper;
 
 
 const HOCWrappedSecret = withWrapper(Secret);
+//Other use cases include:
