@@ -36,7 +36,7 @@ collection.find().toArray() //find returns a cursor to the query which can then 
 //If the whole collection needs to be returned, this 2 step process could be avoided by converting it to an array.
 
 
-client.close() //Close connection after doing the operations.
+client.close() //Close connection after performing the operations.
 
 
 //We can notice above that, each time we want to perform an operation, we are opening the connection
