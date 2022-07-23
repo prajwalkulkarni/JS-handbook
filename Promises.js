@@ -52,3 +52,5 @@ finalResolution
     .catch(err => {
         console.log(err);
     });
+
+//Callback functions from promises are executed in microtask queue.
