@@ -7,6 +7,7 @@
   <li>useCallback(callback,[dependencies]</li>
   <li>useContext(contextProvider)</li>
   <li>useRef()</li>
+  <li>useMemo(val)</li>
  </ul>
 
 <hr/>
