@@ -54,3 +54,12 @@ finalResolution
     });
 
 //Callback functions from promises are executed in microtask queue.
+
+
+
+
+//Promise.all --> Resolves after all the promises in the iterable resolves, the result is rejected as soon as any of the promise in the iterable is rejected.
+
+//Promise.allSettled --> Resolves after all promises fulfills or rejects.
+
+//Promise.any --> Resolves as soon as any of the promise in the iterable resolves, rejects with AggregateError if all the promises in the iterable fails.
