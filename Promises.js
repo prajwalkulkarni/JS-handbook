@@ -63,3 +63,5 @@ finalResolution
 //Promise.allSettled --> Resolves after all promises fulfills or rejects.
 
 //Promise.any --> Resolves as soon as any of the promise in the iterable resolves, rejects with AggregateError if all the promises in the iterable fails.
+
+//Promise.race --> Resolves or rejects as soon as any of the promise in the iterable resolves or rejects.
