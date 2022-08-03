@@ -1,6 +1,6 @@
 const merge = require('webapck-merge')
 const path = require('path')
-const webapckConfig = require('paht/to/webpack.config.js')
+const webapckConfig = require('path/to/webpack.config.js')
 
 module.exports = merge(webpackConfig,{
   mode:'development',
